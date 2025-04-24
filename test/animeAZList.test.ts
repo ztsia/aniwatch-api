@@ -4,6 +4,7 @@ import { HiAnime } from "aniwatch";
 const sortOption = "all";
 const page = 1;
 
+//test
 // npx vitest run animeAZList.test.ts
 test(`GET /api/v2/hianime/azlist/${sortOption}?page=${page}`, async () => {
   const hianime = new HiAnime.Scraper();
