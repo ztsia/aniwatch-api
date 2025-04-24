@@ -45,25 +45,6 @@ jobs:
       - name: Run tests with coverage
         run: npm test -- --coverage
       
-      # # UPLOAD TEST REPORTS
-      # - name: Upload test reports
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: test-reports
-      #     path: |
-      #       test-results/
-      #       junit.xml
-      #     retention-days: 7
-      
-      # # UPLOAD CODE COVERAGE
-      # - name: Upload coverage reports
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     directory: ./coverage/
-      #     flags: unittests
-      #     fail_ci_if_error: true
-      
       # DEPLOYMENT (only on main branch)
       - name: Deploy to production
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
