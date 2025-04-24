@@ -27,7 +27,7 @@ jobs:
         run: npm install
         
       - name: Install coverage dependency
-        run: npm install --no-save --legacy-peer-deps @vitest/coverage-v8
+        run: npm install --no-save @vitest/coverage-v8@2.1.9
       
       # BUILD
       - name: Build project
